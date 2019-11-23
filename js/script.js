@@ -1,10 +1,13 @@
 var pathName = location.pathname.split('/')
+console.log(pathName)
 var pageName = pathName[2]
-var referrerAry = document.referrer
-var referrerHost = referrerAry.split('/')[2]
-var referrerPage = referrerAry.split('/')[3]
+console.log(pageName)
+var referrerAry = document.referrer.split('/')
+console.log(referrerAry)
+var referrerHost = referrerAry[2]
+console.log(referrerHost)
 if(
-  (referrerHost != location.host || referrerPage === '') &&
+  (referrerHost != location.host || referrerHost === '') &&
   pageName != '' &&
   pageName != 'other2.html'
 ) {
